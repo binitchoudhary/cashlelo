@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/blog.css">
+    <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="shortcut icon" href="./assets/images/cashlelo_favicon.ico" type="image/x-icon">
+
+    <title>Blog Page</title>
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+            <a href="./index.html" class="logo"><img src="./assets/images/cashlelo_logo.jpg" alt="" srcset=""></a>
+            <nav class="navbar container" data-navbar>
+                <ul class="navbar-list">
+                    <li>
+                        <a href="./index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li>
+                        <a href="#service" class="navbar-link" data-nav-link>Services</a>
+                    </li>
+                    <li>
+                        <a href="#project" class="navbar-link" data-nav-link>Projects</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="navbar-link" data-nav-link>About Us</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="navbar-link" data-nav-link>Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-primary getStartedBtn" data-popup-target="popup">Get Started</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+                <ion-icon name="menu-outline" class="open"></ion-icon>
+                <ion-icon name="close-outline" class="close"></ion-icon>
+            </button>
+        </div>
+    </header>
+
+    <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+            <h2 class="h2 section-title">Latest Articles Updated Weekly</h2>
+            <p class="section-text">
+                Stay informed with our latest articles, updated weekly. Explore valuable insights, tips, and trends in the ever-evolving world of digital marketing.
+            </p>
+            <ul class="grid-list" id="blog-list">
+                <!-- Blog posts will be dynamically added here using JavaScript -->
+            </ul>
+        </div>
+    </section>
+
+    <section class="section blog-post" id="blog-post" aria-label="blog post">
+        <div class="container" id="blog-content">
+            <!-- Blog post content will be displayed here -->
+        </div>
+    </section>
+    </section>
+    <footer class="footer">
+        <div class="container">
+    
+          <p class="copyright">
+            &copy; 2023 All Rights Reserved by <a href="#" class="copyright-link">CASHLELO</a>
+          </p>
+    
+        </div>
+      </footer>     
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const navToggler = document.querySelector("[data-nav-toggler]");
+  const navbar = document.querySelector("[data-navbar]");
+
+  navToggler.addEventListener("click", function () {
+    navbar.classList.toggle("active");
+  });
+
+  const navbarLinks = document.querySelectorAll("[data-nav-link]");
+  navbarLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      navbar.classList.remove("active");
+    });
+  });
+});
+
+    </script>
+
+    <script src="./assets//js/blog.js"></script>
+</body>
+</html>
